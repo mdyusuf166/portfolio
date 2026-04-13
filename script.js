@@ -14,6 +14,7 @@ const demoButtons = document.querySelectorAll(".demo-btn");
 const githubBtn = document.getElementById("loadGithubBtn");
 const githubUsernameInput = document.getElementById("githubUsername");
 const githubResult = document.getElementById("githubResult");
+const GITHUB_DEFAULT_USERNAME = githubUsernameInput?.closest('.github-card')?.dataset.defaultUsername || githubUsernameInput?.value?.trim() || "mdyousuf";
 
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
@@ -56,15 +57,77 @@ const revealOnScroll = () => {
   });
 };
 
+const animateSkillBars = () => {
+  document.querySelectorAll(".skill-fill").forEach((bar) => {
+    const parent = bar.closest(".skill-card");
+    if (!parent) return;
+    const top = parent.getBoundingClientRect().top;
+    if (top < window.innerHeight * 0.9) {
+      bar.style.width = `${bar.dataset.value}%`;
+    }
+  });
+};
+
 window.addEventListener("scroll", () => {
   revealOnScroll();
+  animateSkillBars();
   updateActiveNav();
 });
 
 window.addEventListener("load", () => {
   revealOnScroll();
+  animateSkillBars();
   updateActiveNav();
+  if (typeof animateFloatingAccents === "function") {
+    animateFloatingAccents();
+  }
 });
+
+const floatingAccents = document.querySelectorAll(".floating-accent");
+const hero = document.querySelector(".hero");
+const profileFrame = document.querySelector(".profile-avatar-frame");
+
+const animateFloatingAccents = () => {
+  if (!floatingAccents.length) {
+    return;
+  }
+
+  const step = (time) => {
+    floatingAccents.forEach((accent, index) => {
+      const x = Math.sin((time / 1200) + index * 0.9) * (18 + index * 4);
+      const y = Math.cos((time / 1000) + index * 1.3) * (8 + index * 3);
+      accent.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    });
+    window.requestAnimationFrame(step);
+  };
+
+  window.requestAnimationFrame(step);
+};
+
+const animateHeroPanel = (event) => {
+  if (!hero || !profileFrame) {
+    return;
+  }
+
+  const rect = hero.getBoundingClientRect();
+  const offsetX = (event.clientX - rect.left) / rect.width - 0.5;
+  const offsetY = (event.clientY - rect.top) / rect.height - 0.5;
+
+  profileFrame.style.transform = `translate3d(${offsetX * 12}px, ${offsetY * 10}px, 0) rotate(${offsetX * 3}deg)`;
+};
+
+const resetHeroPanel = () => {
+  if (!profileFrame) {
+    return;
+  }
+
+  profileFrame.style.transform = "translate3d(0, 0, 0) rotate(0deg)";
+};
+
+if (hero) {
+  hero.addEventListener("mousemove", animateHeroPanel);
+  hero.addEventListener("mouseleave", resetHeroPanel);
+}
 
 const openModal = (title, text) => {
   modalTitle.textContent = title;
@@ -98,17 +161,17 @@ window.addEventListener("keydown", (e) => {
 });
 
 async function loadGitHubRepos() {
-  const username = githubUsernameInput.value.trim();
+  const username = githubUsernameInput.value.trim() || GITHUB_DEFAULT_USERNAME;
 
   if (!username) {
-    githubResult.innerHTML = `<p class="muted">Please enter a GitHub username.</p>`;
+    githubResult.innerHTML = `<div class="state-message error-state">Please enter a GitHub username.</div>`;
     return;
   }
 
-  githubResult.innerHTML = `<p class="muted">Loading GitHub repositories...</p>`;
+  githubResult.innerHTML = `<div class="state-message loading-state"><span class="loading-dot"></span>Loading repositories from ${username}…</div>`;
 
   try {
-    const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
+    const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=8`);
 
     if (!response.ok) {
       throw new Error("GitHub user not found or repositories unavailable.");
@@ -117,22 +180,22 @@ async function loadGitHubRepos() {
     const repos = await response.json();
 
     if (!Array.isArray(repos) || repos.length === 0) {
-      githubResult.innerHTML = `<p class="muted">No public repositories found.</p>`;
+      githubResult.innerHTML = `<div class="state-message empty-state">No public repositories found for <strong>${username}</strong>.</div>`;
       return;
     }
 
     const reposHTML = repos
       .map((repo) => `
         <article class="repo-card">
-          <div>
+          <div class="repo-card-body">
             <h4>${repo.name}</h4>
             <p>${repo.description || "No description available."}</p>
           </div>
           <div class="repo-meta">
-            ${repo.language ? `<span>${repo.language}</span>` : ""}
-            <span>? ${repo.stargazers_count}</span>
-            <span>?? ${repo.forks_count}</span>
-            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">View repo</a>
+            ${repo.language ? `<span class="repo-meta-item">${repo.language}</span>` : ""}
+            <span class="repo-meta-item">★ ${repo.stargazers_count}</span>
+            <span class="repo-meta-item">⇄ ${repo.forks_count}</span>
+            <a class="repo-meta-link" href="${repo.html_url}" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           </div>
         </article>
       `)
@@ -140,7 +203,7 @@ async function loadGitHubRepos() {
 
     githubResult.innerHTML = `<div class="repo-grid">${reposHTML}</div>`;
   } catch (error) {
-    githubResult.innerHTML = `<p class="muted">${error.message}</p>`;
+    githubResult.innerHTML = `<div class="state-message error-state">${error.message}</div>`;
   }
 }
 
