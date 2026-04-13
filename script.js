@@ -14,7 +14,11 @@ const demoButtons = document.querySelectorAll(".demo-btn");
 const githubBtn = document.getElementById("loadGithubBtn");
 const githubUsernameInput = document.getElementById("githubUsername");
 const githubResult = document.getElementById("githubResult");
-const GITHUB_DEFAULT_USERNAME = githubUsernameInput?.closest('.github-card')?.dataset.defaultUsername || githubUsernameInput?.value?.trim() || "mdyousuf";
+const GITHUB_DEFAULT_USERNAME = (githubUsernameInput?.closest('.github-card')?.dataset.defaultUsername || "mdyousuf").trim();
+
+if (githubUsernameInput && !githubUsernameInput.value.trim()) {
+  githubUsernameInput.value = GITHUB_DEFAULT_USERNAME;
+}
 
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
@@ -46,6 +50,8 @@ const updateActiveNav = () => {
   });
 };
 
+const timelineSection = document.querySelector(".timeline");
+
 const revealOnScroll = () => {
   const triggerBottom = window.innerHeight * 0.88;
 
@@ -54,6 +60,22 @@ const revealOnScroll = () => {
     if (top < triggerBottom) {
       element.classList.add("active");
     }
+  });
+};
+
+const animateTimelineLine = () => {
+  if (!timelineSection) return;
+
+  const rect = timelineSection.getBoundingClientRect();
+  const triggerBottom = window.innerHeight * 0.85;
+  if (rect.top < triggerBottom) {
+    timelineSection.classList.add("active");
+  }
+};
+
+const staggerResearchCards = () => {
+  document.querySelectorAll(".research-card, .research-abstract").forEach((card, index) => {
+    card.style.transitionDelay = `${index * 90}ms`;
   });
 };
 
@@ -71,15 +93,21 @@ const animateSkillBars = () => {
 window.addEventListener("scroll", () => {
   revealOnScroll();
   animateSkillBars();
+  animateTimelineLine();
   updateActiveNav();
 });
 
 window.addEventListener("load", () => {
   revealOnScroll();
   animateSkillBars();
+  animateTimelineLine();
+  staggerResearchCards();
   updateActiveNav();
   if (typeof animateFloatingAccents === "function") {
     animateFloatingAccents();
+  }
+  if (githubResult) {
+    loadGitHubRepos();
   }
 });
 
@@ -209,6 +237,15 @@ async function loadGitHubRepos() {
 
 if (githubBtn) {
   githubBtn.addEventListener("click", loadGitHubRepos);
+}
+
+if (githubUsernameInput) {
+  githubUsernameInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      loadGitHubRepos();
+    }
+  });
 }
 
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
