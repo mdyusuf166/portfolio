@@ -259,3 +259,42 @@ smoothLinks.forEach((anchor) => {
     }
   });
 });
+
+const showContactToast = (message) => {
+  let toast = document.querySelector(".contact-toast");
+
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.className = "contact-toast";
+    document.body.appendChild(toast);
+  }
+
+  toast.textContent = message;
+  toast.classList.add("active");
+
+  clearTimeout(showContactToast.timeoutId);
+  showContactToast.timeoutId = setTimeout(() => {
+    toast.classList.remove("active");
+  }, 2800);
+};
+
+const emailButton = document.querySelector(".contact-email");
+const linkedinButton = document.querySelector(".contact-linkedin");
+
+if (emailButton) {
+  emailButton.addEventListener("click", async () => {
+    const email = emailButton.dataset.email;
+    try {
+      await navigator.clipboard.writeText(email);
+      showContactToast(`Email copied: ${email}`);
+    } catch (error) {
+      window.location.href = `mailto:${email}`;
+    }
+  });
+}
+
+if (linkedinButton) {
+  linkedinButton.addEventListener("click", () => {
+    showContactToast("LinkedIn profile is being prepared. Please check back soon.");
+  });
+}

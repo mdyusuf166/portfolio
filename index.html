@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="research-styles.css" />
+  <link rel="stylesheet" href="case-studies-styles.css" />
 </head>
 
 <body>
@@ -40,10 +42,13 @@
         <a href="#github">GitHub</a>
         <a href="#timeline">Timeline</a>
         <a href="#research">Research</a>
-        <a href="#case-study">Case Studies</a>
+        <a href="#case-studies">Case Studies</a>
         <a href="#publications">Publications</a>
+        <a href="publications.html">Research Archive</a>
+        <a href="blog-section.html">Learning Logs</a>
+        <a href="cv-section.html">Research CV</a>
         <a href="#blog">Lab Notes</a>
-        <a href="#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -70,6 +75,10 @@
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">View Projects</a>
             <a href="#research" class="btn btn-secondary">Research Vision</a>
+            <a href="publications.html" class="btn btn-outline">Research Archive</a>
+            <a href="blog-section.html" class="btn btn-outline">Learning Logs</a>
+            <a href="cv-section.html" class="btn btn-outline">Research CV</a>
+            <a href="contact.html" class="btn btn-outline">Contact</a>
             <a href="cv.pdf" class="btn btn-outline">Download CV</a>
           </div>
 
@@ -610,105 +619,530 @@
       </div>
     </section>
 
+    <!-- Research & Vision Section -->
     <section id="research" class="research section">
       <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Research & Vision</p>
-          <h2>Focused laboratory direction for long-term scientific contribution.</h2>
-          <p>Strategic research themes that align disciplined systems engineering with academic rigor, experimental clarity, and future-ready innovation.</p>
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <h2>Research Vision & Direction</h2>
+          <p class="section-subtitle">Long-term scientific pursuit across frontier domains</p>
         </div>
 
-        <div class="research-grid reveal">
-          <article class="research-card reveal">
-            <div class="research-card-header">
-              <span class="paper-badge">AGI Roadmap</span>
-              <h3>Modular cognition, robust generalization, and safe adaptive systems.</h3>
-            </div>
-            <p>Defining a research agenda for AGI that emphasizes interpretable reasoning, layered architectures, and responsible system behavior across heterogeneous domains.</p>
-          </article>
-
-          <article class="research-card reveal">
-            <div class="research-card-header">
-              <span class="paper-badge">Quantum-Inspired Cancer Therapy</span>
-              <h3>Computational models bridging quantum methods and therapeutic discovery.</h3>
-            </div>
-            <p>Exploring quantum-inspired modeling approaches to support early-stage oncology research and complex molecular simulation with scientific precision.</p>
-          </article>
-
-          <article class="research-card reveal">
-            <div class="research-card-header">
-              <span class="paper-badge">Human-Machine Intelligence</span>
-              <h3>Brain-computer interfaces for practical augmentation and ethical systems.</h3>
-            </div>
-            <p>Investigating human-machine intelligence through disciplined interface design, cognitive alignment, and systems that augment human capability ethically.</p>
-          </article>
-
-          <article class="research-card reveal">
-            <div class="research-card-header">
-              <span class="paper-badge">Intelligent Robotics and Systems</span>
-              <h3>Integrated robotics platforms for autonomous perception and control.</h3>
-            </div>
-            <p>Developing intelligent robotics research that couples sensing, motion, and decision systems with rigorous experimental validation.</p>
-          </article>
-        </div>
-
-        <article class="research-abstract reveal">
-          <div class="paper-header">
-            <span class="paper-badge">Abstract</span>
-            <h3>Abstract of Long-Term Scientific Direction</h3>
+        <!-- Abstract Block -->
+        <div class="research-abstract reveal">
+          <div class="abstract-header">
+            <h3 class="abstract-title">Abstract of Long-Term Scientific Direction</h3>
+            <div class="abstract-divider"></div>
           </div>
-          <p>My research statement is grounded in disciplined systems thinking, rigorous experimentation, and strategic scientific purpose. The lab mission is to advance credible research across AGI, quantum-inspired life sciences, human-machine intelligence, and intelligent robotics with a focus on long-term scientific value and academic relevance.</p>
-        </article>
+          
+          <p class="abstract-text">
+            My research trajectory is grounded in systems-level thinking applied to three interconnected domains: artificial intelligence architecture, biomedical innovation through quantum-inspired approaches, and human-machine integration. The overarching goal is to advance toward artificial general intelligence while ensuring safety and alignment, explore revolutionary therapeutic pathways via quantum computing principles, and develop seamless brain-computer interfaces that augment human cognition. These directions converge on a singular purpose: building intelligent systems that solve humanity's most pressing challenges while maintaining rigorous scientific discipline and ethical accountability.
+          </p>
+
+          <div class="abstract-badges">
+            <span class="badge">Systems Architecture</span>
+            <span class="badge">Computational Theory</span>
+            <span class="badge">Biomedical Innovation</span>
+            <span class="badge">Quantum Computing</span>
+            <span class="badge">Neurotechnology</span>
+            <span class="badge">AI Safety</span>
+          </div>
+        </div>
+
+        <!-- Research Directions Grid -->
+        <div class="research-grid">
+          <!-- Research Direction 1: AGI Roadmap -->
+          <div class="research-card reveal" data-research="1">
+            <div class="card-accent"></div>
+            <div class="card-header">
+              <h3 class="card-title">AGI Roadmap</h3>
+              <p class="card-subtitle">Toward Artificial General Intelligence</p>
+            </div>
+
+            <div class="card-vision">
+              <h4>Vision</h4>
+              <p>
+                Developing architectures and training methodologies that progress toward human-level general intelligence. Focus on learning efficiency, transfer learning, and fundamental architectural innovations beyond current transformer paradigms.
+              </p>
+            </div>
+
+            <div class="card-focus">
+              <h4>Research Focus</h4>
+              <ul class="focus-list">
+                <li>Novel transformer architectures and attention mechanisms</li>
+                <li>Efficient training and inference optimization</li>
+                <li>Multi-modality integration and reasoning</li>
+                <li>Alignment and safety mechanisms in advanced models</li>
+                <li>Recursive self-improvement frameworks</li>
+              </ul>
+            </div>
+
+            <div class="card-tags">
+              <span class="tag">Deep Learning</span>
+              <span class="tag">Neural Architecture</span>
+              <span class="tag">AI Safety</span>
+              <span class="tag">Reasoning Systems</span>
+            </div>
+          </div>
+
+          <!-- Research Direction 2: Quantum-Inspired Cancer Therapy -->
+          <div class="research-card reveal" data-research="2">
+            <div class="card-accent"></div>
+            <div class="card-header">
+              <h3 class="card-title">Quantum-Inspired Cancer Therapy</h3>
+              <p class="card-subtitle">Revolutionary Biomedical Innovation</p>
+            </div>
+
+            <div class="card-vision">
+              <h4>Vision</h4>
+              <p>
+                Applying quantum computing principles and quantum-inspired classical algorithms to oncology. Development of precision therapeutics via quantum simulation of molecular interactions and optimized treatment protocols.
+              </p>
+            </div>
+
+            <div class="card-focus">
+              <h4>Research Focus</h4>
+              <ul class="focus-list">
+                <li>Quantum simulation of cancer cell biology</li>
+                <li>Quantum-classical hybrid algorithms for drug discovery</li>
+                <li>Precision medicine via quantum optimization</li>
+                <li>Biomarker identification using quantum ML</li>
+                <li>Personalized immunotherapy design</li>
+              </ul>
+            </div>
+
+            <div class="card-tags">
+              <span class="tag">Quantum Computing</span>
+              <span class="tag">Drug Discovery</span>
+              <span class="tag">Biomedical</span>
+              <span class="tag">Precision Medicine</span>
+            </div>
+          </div>
+
+          <!-- Research Direction 3: Human-Machine Intelligence / BCI -->
+          <div class="research-card reveal" data-research="3">
+            <div class="card-accent"></div>
+            <div class="card-header">
+              <h3 class="card-title">Human-Machine Intelligence</h3>
+              <p class="card-subtitle">Brain-Computer Interface & Augmentation</p>
+            </div>
+
+            <div class="card-vision">
+              <h4>Vision</h4>
+              <p>
+                Creating seamless interfaces between human cognition and artificial systems. Development of non-invasive BCIs that decode neural signals, enable direct human-AI collaboration, and augment human cognitive capabilities.
+              </p>
+            </div>
+
+            <div class="card-focus">
+              <h4>Research Focus</h4>
+              <ul class="focus-list">
+                <li>Non-invasive neural signal decoding (EEG, fNIRS)</li>
+                <li>Real-time attention and intention classification</li>
+                <li>Hybrid human-AI decision making frameworks</li>
+                <li>Cognitive augmentation interfaces</li>
+                <li>Neural feedback and learning optimization</li>
+              </ul>
+            </div>
+
+            <div class="card-tags">
+              <span class="tag">Neurotechnology</span>
+              <span class="tag">Brain-Computer Interface</span>
+              <span class="tag">Signal Processing</span>
+              <span class="tag">Cognitive Science</span>
+            </div>
+          </div>
+
+          <!-- Research Direction 4: Intelligent Robotics and Systems -->
+          <div class="research-card reveal" data-research="4">
+            <div class="card-accent"></div>
+            <div class="card-header">
+              <h3 class="card-title">Intelligent Robotics & Systems</h3>
+              <p class="card-subtitle">Embodied AI and Complex Systems</p>
+            </div>
+
+            <div class="card-vision">
+              <h4>Vision</h4>
+              <p>
+                Developing autonomous robotic systems with advanced reasoning, adaptive learning, and real-world problem-solving capabilities. Integration of perception, planning, and feedback control for complex industrial and scientific applications.
+              </p>
+            </div>
+
+            <div class="card-focus">
+              <h4>Research Focus</h4>
+              <ul class="focus-list">
+                <li>Advanced perception and computer vision</li>
+                <li>Motion planning and autonomous navigation</li>
+                <li>Reinforcement learning for robotic control</li>
+                <li>Multi-agent systems and coordination</li>
+                <li>Human-robot collaboration frameworks</li>
+              </ul>
+            </div>
+
+            <div class="card-tags">
+              <span class="tag">Robotics</span>
+              <span class="tag">Control Systems</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Embodied AI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Convergence -->
+        <div class="convergence-block reveal">
+          <div class="convergence-header">
+            <h3>The Convergence</h3>
+            <p>Where these research directions intersect and amplify each other</p>
+          </div>
+
+          <div class="convergence-grid">
+            <div class="convergence-item">
+              <div class="convergence-icon">🧠</div>
+              <h4>Cognitive Architecture</h4>
+              <p>AGI systems informed by neuroscience, BCIs enabling direct AI-brain integration</p>
+            </div>
+
+            <div class="convergence-item">
+              <div class="convergence-icon">⚙️</div>
+              <h4>Embodied Intelligence</h4>
+              <p>Robotics platforms as testbeds for AGI algorithms, real-world safety validation</p>
+            </div>
+
+            <div class="convergence-item">
+              <div class="convergence-icon">🔬</div>
+              <h4>Accelerated Discovery</h4>
+              <p>AI-designed quantum therapies through autonomous discovery robotics and BCIs</p>
+            </div>
+
+            <div class="convergence-item">
+              <div class="convergence-icon">🌐</div>
+              <h4>Systems Integration</h4>
+              <p>Unified frameworks for AI safety, biomedical applications, and human augmentation</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action / Learning Path -->
+        <div class="research-cta reveal">
+          <div class="cta-content">
+            <h3>Current Focus</h3>
+            <p>Building foundational knowledge through rigorous coursework, research papers, and technical projects. Establishing publication record and preparing for advanced research roles at leading institutions.</p>
+            <div class="cta-actions">
+              <a href="#projects" class="btn btn-secondary">View Research Projects</a>
+              <a href="#publications" class="btn btn-outline">Research Publications</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="case-study" class="case-study section">
+    <!-- Premium MIT-Style Case Study Section -->
+    <section id="case-studies" class="case-studies section">
       <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Case Studies</p>
-          <h2>Research case studies with lab context.</h2>
-          <p>Concise summaries of challenge, method, findings, and future experimentation.</p>
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <h2>Research Engineering Case Studies</h2>
+          <p class="section-subtitle">Deep dives into frontier system design, implementation, and validation</p>
         </div>
 
-        <div class="case-study-grid">
-          <article class="case-study-card reveal">
-            <h3>AGI System Prototype</h3>
-            <div class="case-detail"><strong>Challenge:</strong> Define scalable intelligence architecture.</div>
-            <div class="case-detail"><strong>Concept:</strong> Modular reasoning and memory subsystems.</div>
-            <div class="case-detail"><strong>Approach:</strong> Research-driven design with layered cognition and
-              adaptive task handling.</div>
-            <div class="case-detail"><strong>Impact:</strong> A framework for future AGI experiments and system
-              evaluation.</div>
-            <div class="case-detail"><strong>Stage:</strong> Concept / design.</div>
-            <div class="case-detail"><strong>Future:</strong> Prototype implementation with agent orchestration.</div>
+        <!-- Case Studies Grid -->
+        <div class="case-studies-grid">
+          
+          <!-- Case Study 1: AGI System -->
+          <article class="case-study-card reveal" data-study="1">
+            <div class="card-header">
+              <div class="study-badge">AGI Architecture</div>
+              <h3 class="study-title">Modular AGI System Prototype</h3>
+              <p class="study-tagline">Hierarchical reasoning with adaptive task orchestration</p>
+            </div>
+
+            <div class="study-section">
+              <h4 class="section-label">Challenge</h4>
+              <p class="section-content">
+                Design an AGI architecture that demonstrates human-level reasoning across heterogeneous domains while maintaining interpretability and safety. Address the limitations of monolithic transformer models by introducing modular subsystems that can specialize and generalize.
+              </p>
+            </div>
+
+            <div class="study-section">
+              <h4 class="section-label">Concept</h4>
+              <p class="section-content">
+                A hierarchical cognitive architecture with specialized modules for perception, memory, reasoning, and action generation. Each module operates with clear interfaces, enabling transparent information flow and emergent general intelligence through principled composition.
+              </p>
+            </div>
+
+            <div class="study-section">
+              <h4 class="section-label">Technical Direction</h4>
+              <ul class="direction-list">
+                <li>Transformer-based perception layer with multi-modal encoding</li>
+                <li>Episodic and semantic memory subsystems with retrieval mechanisms</li>
+                <li>Multi-step reasoning engine with causal inference capabilities</li>
+                <li>Safe action planning with constraint satisfaction and safety filters</li>
+                <li>Meta-learning for task adaptation across domains</li>
+              </ul>
+            </div>
+
+            <div class="study-section">
+              <h4 class="section-label">System Architecture</h4>
+              <div class="architecture-diagram">
+                <div class="arch-block">
+                  <span class="arch-label">Input Layer</span>
+                  <p>Multi-modal sensor fusion</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-block">
+                  <span class="arch-label">Perception Module</span>
+                  <p>Feature extraction & encoding</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-block">
+                  <span class="arch-label">Memory Complex</span>
+                  <p>Episodic + Semantic</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-block">
+                  <span class="arch-label">Reasoning Engine</span>
+                  <p>Inference & planning</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-block">
+                  <span class="arch-label">Action System</span>
+                  <p>Safe execution</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="study-metrics">
+              <div class="metric">
+                <span class="metric-label">Expected Impact</span>
+                <p class="metric-value">Demonstrable reasoning across 5+ domains with interpretable decision trees</p>
+              </div>
+
+              <div class="metric">
+                <span class="metric-label">Current Stage</span>
+                <p class="metric-value">Architecture design & proof-of-concept (PoC)</p>
+              </div>
+
+              <div class="metric">
+                <span class="metric-label">Future Expansion</span>
+                <p class="metric-value">Full-scale implementation with adversarial testing and safety validation</p>
+              </div>
+            </div>
+
+            <div class="study-tags">
+              <span class="tag">Neural Architecture</span>
+              <span class="tag">Multi-agent Systems</span>
+              <span class="tag">Safety Engineering</span>
+              <span class="tag">Interpretability</span>
+              <span class="tag">Meta-learning</span>
+            </div>
           </article>
 
-          <article class="case-study-card reveal">
-            <h3>Cybersecurity Training Lab</h3>
-            <div class="case-detail"><strong>Challenge:</strong> Teach practical security skills in a controlled
-              environment.</div>
-            <div class="case-detail"><strong>Concept:</strong> Realistic training modules and vulnerability scenarios.
+          <!-- Case Study 2: Quantum Chemistry Simulation -->
+          <article class="case-study-card reveal" data-study="2">
+            <div class="card-header">
+              <div class="study-badge">Quantum-Biotech</div>
+              <h3 class="study-title">Quantum Chemistry Simulation Web Platform</h3>
+              <p class="study-tagline">Interactive molecular dynamics visualization and analysis</p>
             </div>
-            <div class="case-detail"><strong>Approach:</strong> Structured challenge progression with analysis and
-              remediation.</div>
-            <div class="case-detail"><strong>Impact:</strong> Better readiness for security research and defensive
-              engineering.</div>
-            <div class="case-detail"><strong>Stage:</strong> Planning.</div>
-            <div class="case-detail"><strong>Future:</strong> Expand into an interactive research lab platform.</div>
+
+            <div class="study-section">
+              <h4 class="section-label">Challenge</h4>
+              <p class="section-content">
+                Make quantum chemistry simulation accessible to researchers without specialized hardware. Develop an intuitive web interface that bridges quantum computing concepts and practical molecular analysis, enabling exploration of drug-target interactions and quantum-inspired therapeutics.
+              </p>
+            </div>
+
+            <div class="study-section">
+              <h4 class="section-label">Concept</h4>
+              <p class="section-content">
+                A cloud-based platform combining classical quantum simulation algorithms with visualization tools. Users can define molecular systems, run simulations on backend servers, and analyze results through interactive 3D models and data dashboards designed for computational biologists and chemists.
+              </p>
+            </div>
+
+            <div class="study-section">
+              <h4 class="section-label">Technical Direction</h4>
+              <ul class="direction-list">
+                <li>Quantum circuit simulation using Qiskit/Cirq backends</li>
+                <li>Variational quantum eigensolver (VQE) for molecular energy calculations</li>
+                <li>Three.js-based 3D molecular visualization with real-time updates</li>
+                <li>Backend API for job queue management and result caching</li>
+                <li>Scientific plotting (matplotlib/plotly) for analysis dashboards</li>
+              </ul>
+            </div>
+
+            <div class="study-section">
+              <h4 class="section-label">System Architecture</h4>
+              <div class="architecture-diagram">
+                <div class="arch-block">
+                  <span class="arch-label">React Frontend</span>
+                  <p>UI + Three.js visualization</p>
+                </div>
+                <div class="arch-arrow">↔</div>
+                <div class="arch-block">
+                  <span class="arch-label">FastAPI Server</span>
+                  <p>Job management & caching</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-block">
+                  <span class="arch-label">Quantum Backend</span>
+                  <p>Qiskit/Cirq execution</p>
+                </div>
+                <div class="arch-arrow">↔</div>
+                <div class="arch-block">
+                  <span class="arch-label">Database</span>
+                  <p>Results & molecular library</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="study-metrics">
+              <div class="metric">
+                <span class="metric-label">Expected Impact</span>
+                <p class="metric-value">Accessible platform for 100+ molecular simulations with sub-second rendering</p>
+              </div>
+
+              <div class="metric">
+                <span class="metric-label">Current Stage</span>
+                <p class="metric-value">MVP with basic VQE and visualization (in development)</p>
+              </div>
+
+              <div class="metric">
+                <span class="metric-label">Future Expansion</span>
+                <p class="metric-value">Advanced algorithms, drug discovery workflows, and quantum hardware integration</p>
+              </div>
+            </div>
+
+            <div class="study-tags">
+              <span class="tag">Quantum Computing</span>
+              <span class="tag">Molecular Simulation</span>
+              <span class="tag">Full-Stack Web</span>
+              <span class="tag">Scientific Visualization</span>
+              <span class="tag">Drug Discovery</span>
+            </div>
           </article>
 
-          <article class="case-study-card reveal">
-            <h3>Quantum Chemistry Interface</h3>
-            <div class="case-detail"><strong>Challenge:</strong> Make quantum-inspired chemical systems accessible.
+          <!-- Case Study 3: Cybersecurity Training Platform -->
+          <article class="case-study-card reveal" data-study="3">
+            <div class="card-header">
+              <div class="study-badge">Cybersecurity</div>
+              <h3 class="study-title">Immersive Cybersecurity Research Lab</h3>
+              <p class="study-tagline">Hands-on training environment with realistic attack scenarios</p>
             </div>
-            <div class="case-detail"><strong>Concept:</strong> Web-based simulation and visualization tools.</div>
-            <div class="case-detail"><strong>Approach:</strong> Integrate computational models with intuitive scientific
-              UI.</div>
-            <div class="case-detail"><strong>Impact:</strong> Bridge research ideas and practical exploratory tools.
+
+            <div class="study-section">
+              <h4 class="section-label">Challenge</h4>
+              <p class="section-content">
+                Create a realistic, isolated environment for security research training that bridges theoretical knowledge and practical exploitation skills. Develop infrastructure that auto-generates vulnerable systems, supports multi-stage attacks, and provides detailed forensic analysis for learning and research validation.
+              </p>
             </div>
-            <div class="case-detail"><strong>Stage:</strong> Concept.</div>
-            <div class="case-detail"><strong>Future:</strong> Full research-focused simulation app.</div>
+
+            <div class="study-section">
+              <h4 class="section-label">Concept</h4>
+              <p class="section-content">
+                An orchestrated lab platform that provisions containerized vulnerable systems on-demand. Learners navigate progressively harder scenarios—from reconnaissance to exploitation to persistence—while capturing flags and generating logs for analysis. Emphasis on understanding attack chains rather than rote memorization.
+              </p>
+            </div>
+
+            <div class="study-section">
+              <h4 class="section-label">Technical Direction</h4>
+              <ul class="direction-list">
+                <li>Docker-based vulnerable system generation with Compose orchestration</li>
+                <li>Custom CTF framework with progress tracking and scoring</li>
+                <li>Real-time log aggregation and attack reconstruction</li>
+                <li>Ansible playbooks for reproducible infrastructure as code</li>
+                <li>WebSocket-based dashboard for live flag capture and system state</li>
+              </ul>
+            </div>
+
+            <div class="study-section">
+              <h4 class="section-label">System Architecture</h4>
+              <div class="architecture-diagram">
+                <div class="arch-block">
+                  <span class="arch-label">Web Dashboard</span>
+                  <p>User interface + progress</p>
+                </div>
+                <div class="arch-arrow">↔</div>
+                <div class="arch-block">
+                  <span class="arch-label">Lab Controller</span>
+                  <p>Orchestration & game logic</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-block">
+                  <span class="arch-label">Docker Engine</span>
+                  <p>Container provisioning</p>
+                </div>
+                <div class="arch-arrow">↔</div>
+                <div class="arch-block">
+                  <span class="arch-label">Log Analysis</span>
+                  <p>ELK stack for forensics</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="study-metrics">
+              <div class="metric">
+                <span class="metric-label">Expected Impact</span>
+                <p class="metric-value">Comprehensive training ecosystem with 50+ realistic scenarios and measurable skill progression</p>
+              </div>
+
+              <div class="metric">
+                <span class="metric-label">Current Stage</span>
+                <p class="metric-value">Core lab infrastructure, 10+ initial scenarios</p>
+              </div>
+
+              <div class="metric">
+                <span class="metric-label">Future Expansion</span>
+                <p class="metric-value">Advanced persistent threats (APT) simulations, team-based competitions, and research publishing integrations</p>
+              </div>
+            </div>
+
+            <div class="study-tags">
+              <span class="tag">DevOps Engineering</span>
+              <span class="tag">Security Research</span>
+              <span class="tag">Infrastructure as Code</span>
+              <span class="tag">Forensic Analysis</span>
+              <span class="tag">Cloud Architecture</span>
+            </div>
           </article>
+        </div>
+
+        <!-- Deep Dive Section -->
+        <div class="deep-dive-section reveal">
+          <h3>Shared Engineering Principles</h3>
+          <p>Across all three case studies, we prioritize:</p>
+          
+          <div class="principles-grid">
+            <div class="principle-block">
+              <h4>Modularity</h4>
+              <p>Clean interfaces enable component reuse, testing, and independent scaling.</p>
+            </div>
+
+            <div class="principle-block">
+              <h4>Interpretability</h4>
+              <p>Systems designed for transparency, auditability, and principled debugging.</p>
+            </div>
+
+            <div class="principle-block">
+              <h4>Safety First</h4>
+              <p>Constraints, validation, and failsafes embedded at architectural levels.</p>
+            </div>
+
+            <div class="principle-block">
+              <h4>Research-Grade</h4>
+              <p>Rigorous evaluation metrics, reproducibility, and publication readiness from day one.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="case-study-cta reveal">
+          <h3>Next Phase</h3>
+          <p>All three systems are designed as research platforms ready for publication, further development, and collaborative extension. Current focus is on core architecture validation and preparing for peer review.</p>
+          
+          <div class="cta-actions">
+            <a href="#projects" class="btn btn-secondary">View Implementation Details</a>
+            <a href="#research" class="btn btn-outline">Research Direction</a>
+          </div>
         </div>
       </div>
     </section>
@@ -812,19 +1246,40 @@
         </div>
 
         <div class="contact-grid">
-          <article class="glass-card reveal">
-            <h3>Reach Out</h3>
-            <p>I'm interested in working with teams and mentors who are building academic and scientific systems at the
-              frontier of technology.</p>
+          <article class="glass-card reveal contact-panel">
+            <div class="contact-panel-header">
+              <p class="eyebrow">Contact</p>
+              <h3>Share a grounded research proposal or collaborative vision.</h3>
+            </div>
+            <p class="contact-copy">
+              I welcome conversations with mentors, lab partners, and collaborators who are committed to rigorous
+              science, long-term research growth, and credible systems innovation.
+            </p>
             <div class="contact-links">
-              <a href="https://github.com/mdyousuf" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="mailto:contact@mdyousuf.dev">Email</a>
-              <a href="#" target="_blank" rel="noreferrer">LinkedIn (Coming Soon)</a>
+              <a class="contact-action" href="https://github.com/mdyousuf" target="_blank" rel="noreferrer">
+                <span>GitHub</span>
+                <small>Review research repositories and lab artifacts.</small>
+              </a>
+              <button class="contact-action contact-email" type="button" data-email="contact@mdyousuf.dev">
+                <span>Email</span>
+                <small>Copy the contact address for enquiries and research proposals.</small>
+              </button>
+              <button class="contact-action contact-linkedin" type="button" data-status="coming-soon">
+                <span>LinkedIn</span>
+                <small>Professional network profile being prepared for future outreach.</small>
+              </button>
+            </div>
+            <div class="contact-note">
+              <p>
+                For collaboration inquiries, research advisement, or long-term scientific partnership, reach out with an
+                ambitious yet disciplined proposal. I aim to grow research capacity responsibly while building work
+                that is publication-ready and grounded in practical systems verification.
+              </p>
             </div>
           </article>
 
-          <article class="glass-card reveal">
-            <h3>Focus Areas</h3>
+          <article class="glass-card reveal contact-summary">
+            <h3>Priority areas</h3>
             <ul class="clean-list">
               <li>Artificial General Intelligence</li>
               <li>Quantum Biotechnology</li>
@@ -837,6 +1292,12 @@
       </div>
     </section>
   </main>
+
+  <a href="contact.html" class="contact-float" aria-label="Contact page">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+    </svg>
+  </a>
 
   <footer class="site-footer">
     <div class="container footer-content">
@@ -855,6 +1316,8 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="research-script.js"></script>
+  <script src="case-studies-script.js"></script>
 </body>
 
 </html>
